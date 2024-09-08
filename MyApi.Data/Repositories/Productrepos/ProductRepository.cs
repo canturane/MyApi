@@ -1,8 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using MyApi.Data.Context;
 using MyApi.Data.Entities;
-using System.Collections.Generic;
-using System.Threading.Tasks;
 
 namespace MyApi.Data.Repositories.Productrepos
 {

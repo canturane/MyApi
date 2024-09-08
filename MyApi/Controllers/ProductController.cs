@@ -2,8 +2,6 @@
 using Microsoft.AspNetCore.Mvc;
 using MyApi.Service.Dtos;
 using MyApi.Service.ProductService;
-using System.Collections.Generic;
-using System.Threading.Tasks;
 
 namespace MyApi.Controllers
 {

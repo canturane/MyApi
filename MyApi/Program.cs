@@ -3,9 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using MyApi.Data.Context;
 using MyApi.Data.Repositories;
 using MyApi.Data.Repositories.person;
-
 using MyApi.Data.Repositories.Productrepos;
-using MyApi.Service;
 using MyApi.Service.PersonService;
 using MyApi.Service.ProductService;
 
