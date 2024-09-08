@@ -12,7 +12,11 @@ namespace MyApi.Common.Entities
         public DateTime? CreatedDate { get; set; } = new DateTime();
         public DateTime? LastUpdateDate { get; set; } = new DateTime();
 <<<<<<< HEAD
+<<<<<<< HEAD
         public bool IsActive { get; set; }
+=======
+        public bool? IsActive { get; set; }
+>>>>>>> 288b9a8295fb51213e8c2ea94c79e9c386a17eef
 =======
         public bool? IsActive { get; set; }
 >>>>>>> 288b9a8295fb51213e8c2ea94c79e9c386a17eef

@@ -1,21 +1,28 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 ﻿using AutoMapper;
 using MyApi.Data.Entities;
 using MyApi.Data.Repositories.person;
 using MyApi.Service.Dtos;
 using System.Collections.Generic;
 =======
+=======
+>>>>>>> 288b9a8295fb51213e8c2ea94c79e9c386a17eef
 ﻿using MyApi.Data.Entities;
 using MyApi.Data.Repositories.person;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+<<<<<<< HEAD
+>>>>>>> 288b9a8295fb51213e8c2ea94c79e9c386a17eef
+=======
 >>>>>>> 288b9a8295fb51213e8c2ea94c79e9c386a17eef
 using System.Threading.Tasks;
 
 namespace MyApi.Service.PersonService
 {
+<<<<<<< HEAD
 <<<<<<< HEAD
     public class PersonService : IPersonService
     {
@@ -60,6 +67,8 @@ namespace MyApi.Service.PersonService
             return _mapper.Map<PersonResponseDto>(deletedPerson);
         }
 =======
+=======
+>>>>>>> 288b9a8295fb51213e8c2ea94c79e9c386a17eef
     public class PersonService:IPersonService
     {
         private readonly IPersonRepository _personRepository;
@@ -95,6 +104,9 @@ namespace MyApi.Service.PersonService
         }
 
         
+<<<<<<< HEAD
+>>>>>>> 288b9a8295fb51213e8c2ea94c79e9c386a17eef
+=======
 >>>>>>> 288b9a8295fb51213e8c2ea94c79e9c386a17eef
     }
 }

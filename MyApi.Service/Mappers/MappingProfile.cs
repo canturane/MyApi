@@ -1,7 +1,10 @@
 ﻿using AutoMapper;
 <<<<<<< HEAD
+<<<<<<< HEAD
 using MyApi.Data.Entities;
 using MyApi.Service.Dtos;
+=======
+>>>>>>> 288b9a8295fb51213e8c2ea94c79e9c386a17eef
 =======
 >>>>>>> 288b9a8295fb51213e8c2ea94c79e9c386a17eef
 using System;
@@ -19,6 +22,7 @@ namespace MyApi.Service.Mappers
         {
             CreateMap<Dtos.PersonRequestDto, MyApi.Data.Entities.Person>().ReverseMap();
             CreateMap<Dtos.PersonResponseDto, MyApi.Data.Entities.Person>().ReverseMap();
+<<<<<<< HEAD
 <<<<<<< HEAD
             CreateMap<Dtos.ProductResponseDto, MyApi.Data.Entities.Product>().ReverseMap();
             CreateMap<Dtos.ProductRequestDto, MyApi.Data.Entities.Product>().ReverseMap();
@@ -38,6 +42,8 @@ namespace MyApi.Service.Mappers
 
             
 
+=======
+>>>>>>> 288b9a8295fb51213e8c2ea94c79e9c386a17eef
 =======
 >>>>>>> 288b9a8295fb51213e8c2ea94c79e9c386a17eef
         }
