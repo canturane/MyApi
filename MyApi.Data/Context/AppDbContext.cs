@@ -15,6 +15,7 @@ namespace MyApi.Data.Context
         }
 
         public DbSet<Person> Persons { get; set; }
+<<<<<<< HEAD
         public DbSet<Brand> Brands { get; set; }
         public DbSet<Product> Products { get; set; }
 
@@ -29,4 +30,7 @@ namespace MyApi.Data.Context
 
 
  
+=======
+    }
+>>>>>>> 288b9a8295fb51213e8c2ea94c79e9c386a17eef
 }

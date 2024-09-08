@@ -22,6 +22,7 @@ namespace MyApi.Data.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
+<<<<<<< HEAD
             modelBuilder.Entity("MyApi.Data.Entities.Brand", b =>
                 {
                     b.Property<int>("Id")
@@ -48,6 +49,8 @@ namespace MyApi.Data.Migrations
                     b.ToTable("Brands");
                 });
 
+=======
+>>>>>>> 288b9a8295fb51213e8c2ea94c79e9c386a17eef
             modelBuilder.Entity("MyApi.Data.Entities.Person", b =>
                 {
                     b.Property<int>("Id")
@@ -66,7 +69,11 @@ namespace MyApi.Data.Migrations
                     b.Property<string>("FirstName")
                         .HasColumnType("nvarchar(max)");
 
+<<<<<<< HEAD
                     b.Property<bool>("IsActive")
+=======
+                    b.Property<bool?>("IsActive")
+>>>>>>> 288b9a8295fb51213e8c2ea94c79e9c386a17eef
                         .HasColumnType("bit");
 
                     b.Property<string>("LastName")
@@ -83,6 +90,7 @@ namespace MyApi.Data.Migrations
 
                     b.ToTable("Persons");
                 });
+<<<<<<< HEAD
 
             modelBuilder.Entity("MyApi.Data.Entities.Product", b =>
                 {
@@ -134,6 +142,8 @@ namespace MyApi.Data.Migrations
                 {
                     b.Navigation("Products");
                 });
+=======
+>>>>>>> 288b9a8295fb51213e8c2ea94c79e9c386a17eef
 #pragma warning restore 612, 618
         }
     }
