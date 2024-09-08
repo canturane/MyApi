@@ -3,15 +3,6 @@ using AutoMapper;
 using MyApi.Data.Entities;
 using MyApi.Data.Repositories.person;
 using MyApi.Service.Dtos;
-using System.Collections.Generic;
-
-using MyApi.Data.Entities;
-using MyApi.Data.Repositories.person;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace MyApi.Service.PersonService
 {

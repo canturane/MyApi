@@ -2,8 +2,6 @@
 using MyApi.Data.Entities;
 using MyApi.Data.Repositories.Productrepos;
 using MyApi.Service.Dtos;
-using System.Collections.Generic;
-using System.Threading.Tasks;
 
 namespace MyApi.Service.ProductService
 {
