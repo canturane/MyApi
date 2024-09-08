@@ -1,10 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using MyApi.Data.Entities;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace MyApi.Data.Context
 {
@@ -24,6 +19,7 @@ namespace MyApi.Data.Context
 
             // Global filter for IsActive property
             modelBuilder.Entity<Product>().HasQueryFilter(p => p.IsActive);
+            modelBuilder.Entity<Brand>().HasQueryFilter(p=>p.IsActive);
         }
     }
 

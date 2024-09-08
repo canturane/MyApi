@@ -1,8 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Threading.Tasks;
-using MyApi.Data.Entities;
-
-namespace MyApi.Data.Repositories.Brand
+﻿namespace MyApi.Data.Repositories.Brand
 {
     public class BrandRepository : IBrandRepository
     {
