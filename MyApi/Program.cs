@@ -3,7 +3,12 @@ using Microsoft.EntityFrameworkCore;
 using MyApi.Data.Context;
 using MyApi.Data.Repositories;
 using MyApi.Data.Repositories.person;
+
+using MyApi.Data.Repositories.Productrepos;
+using MyApi.Service;
 using MyApi.Service.PersonService;
+using MyApi.Service.ProductService;
+
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -15,7 +20,8 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 
-//DB Config//hafýzaya bir tane LMSDBContext tipinde tip(instance) çýkartýyorumki diðer alanlarda kullanacaðým.
+
+
 builder.Services.AddDbContext<AppDbContext>(opt => opt.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 
@@ -24,6 +30,10 @@ builder.Services.AddDbContext<AppDbContext>(opt => opt.UseSqlServer(builder.Conf
 builder.Services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
 builder.Services.AddScoped<IPersonRepository, PersonRepository>();
 builder.Services.AddScoped<IPersonService, PersonService>();
+
+builder.Services.AddScoped<IProductRepository, ProductRepository>();
+builder.Services.AddScoped<IProductService, ProductService>();
+
 
 
 var mapperConfig = new MapperConfiguration(mc =>

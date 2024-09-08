@@ -1,4 +1,11 @@
-﻿using MyApi.Data.Entities;
+
+using AutoMapper;
+using MyApi.Data.Entities;
+using MyApi.Data.Repositories.person;
+using MyApi.Service.Dtos;
+using System.Collections.Generic;
+
+using MyApi.Data.Entities;
 using MyApi.Data.Repositories.person;
 using System;
 using System.Collections.Generic;
@@ -8,40 +15,51 @@ using System.Threading.Tasks;
 
 namespace MyApi.Service.PersonService
 {
-    public class PersonService:IPersonService
+
+    public class PersonService : IPersonService
     {
         private readonly IPersonRepository _personRepository;
+        private readonly IMapper _mapper;
 
-        public PersonService(IPersonRepository PersonRepository)
+        public PersonService(IPersonRepository personRepository, IMapper mapper)
         {
-            _personRepository = PersonRepository;
+            _personRepository = personRepository;
+            _mapper = mapper;
         }
 
-        public async Task<IEnumerable<Person>> GetAllAsync()
+        public async Task<IEnumerable<PersonResponseDto>> GetAllAsync()
         {
-            return await _personRepository.GetAllAsync();
+            var persons = await _personRepository.GetAllAsync();
+            return _mapper.Map<IEnumerable<PersonResponseDto>>(persons);
         }
 
-        public async Task<Person> GetByIdAsync(int id)
+        public async Task<PersonResponseDto> GetByIdAsync(int id)
         {
-            return await _personRepository.GetByIdAsync(id);
+            var person = await _personRepository.GetByIdAsync(id);
+            return _mapper.Map<PersonResponseDto>(person);
         }
 
-        public async Task<Person> InsertAsync(Person entity)
+        public async Task<PersonResponseDto> InsertAsync(PersonRequestDto personRequestDto)
         {
-            return await _personRepository.InsertAsync(entity);
+            var person = _mapper.Map<Person>(personRequestDto);
+            var createdPerson = await _personRepository.InsertAsync(person);
+            return _mapper.Map<PersonResponseDto>(createdPerson);
         }
 
-        public async Task<Person> UpdateAsync(Person entity)
+        public async Task<PersonResponseDto> UpdateAsync(PersonRequestDto personRequestDto)
         {
-            return await _personRepository.UpdateAsync(entity);
+            var person = _mapper.Map<Person>(personRequestDto);
+            var updatedPerson = await _personRepository.UpdateAsync(person);
+            return _mapper.Map<PersonResponseDto>(updatedPerson);
         }
 
-        public async Task<Person> DeleteAsync(int id)
+        public async Task<PersonResponseDto> DeleteAsync(int id)
         {
-            return await _personRepository.DeleteAsync(id);
+            var deletedPerson = await _personRepository.DeleteAsync(id);
+            return _mapper.Map<PersonResponseDto>(deletedPerson);
         }
 
         
+
     }
 }

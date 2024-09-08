@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using MyApi.Data.Context;
 
@@ -11,9 +12,11 @@ using MyApi.Data.Context;
 namespace MyApi.Data.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240903115936_sadfsdfasdf")]
+    partial class sadfsdfasdf
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -48,7 +51,6 @@ namespace MyApi.Data.Migrations
                     b.ToTable("Brands");
                 });
 
-
             modelBuilder.Entity("MyApi.Data.Entities.Person", b =>
                 {
                     b.Property<int>("Id")
@@ -68,7 +70,6 @@ namespace MyApi.Data.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("IsActive")
-
                         .HasColumnType("bit");
 
                     b.Property<string>("LastName")
@@ -136,7 +137,6 @@ namespace MyApi.Data.Migrations
                 {
                     b.Navigation("Products");
                 });
-
 #pragma warning restore 612, 618
         }
     }

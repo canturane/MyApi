@@ -1,4 +1,6 @@
-﻿using System;
+
+using MyApi.Service.Dtos;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,5 +15,8 @@ namespace MyApi.Service
         Task<T> InsertAsync(T entity);
         Task<T> UpdateAsync(T entity);
         Task<T> DeleteAsync(int id);
+
+
     }
 }
+

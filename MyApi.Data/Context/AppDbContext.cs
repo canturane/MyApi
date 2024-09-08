@@ -15,5 +15,18 @@ namespace MyApi.Data.Context
         }
 
         public DbSet<Person> Persons { get; set; }
+        public DbSet<Brand> Brands { get; set; }
+        public DbSet<Product> Products { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+
+            // Global filter for IsActive property
+            modelBuilder.Entity<Product>().HasQueryFilter(p => p.IsActive);
+        }
     }
+
+
+
 }
