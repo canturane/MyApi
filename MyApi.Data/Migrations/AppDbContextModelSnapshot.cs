@@ -48,7 +48,6 @@ namespace MyApi.Data.Migrations
                     b.ToTable("Brands");
                 });
 
-
             modelBuilder.Entity("MyApi.Data.Entities.Person", b =>
                 {
                     b.Property<int>("Id")
@@ -68,7 +67,6 @@ namespace MyApi.Data.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("IsActive")
-
                         .HasColumnType("bit");
 
                     b.Property<string>("LastName")
@@ -136,7 +134,6 @@ namespace MyApi.Data.Migrations
                 {
                     b.Navigation("Products");
                 });
-
 #pragma warning restore 612, 618
         }
     }
