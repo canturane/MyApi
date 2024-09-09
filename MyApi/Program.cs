@@ -2,8 +2,10 @@ using AutoMapper;
 using Microsoft.EntityFrameworkCore;
 using MyApi.Data.Context;
 using MyApi.Data.Repositories;
+using MyApi.Data.Repositories.Brand;
 using MyApi.Data.Repositories.person;
 using MyApi.Data.Repositories.Productrepos;
+using MyApi.Service.BrandService;
 using MyApi.Service.PersonService;
 using MyApi.Service.ProductService;
 
@@ -32,6 +34,8 @@ builder.Services.AddScoped<IPersonService, PersonService>();
 builder.Services.AddScoped<IProductRepository, ProductRepository>();
 builder.Services.AddScoped<IProductService, ProductService>();
 
+builder.Services.AddScoped<IBrandRepository, BrandRepository>();
+builder.Services.AddScoped<IBrandService, BrandService>();
 
 
 var mapperConfig = new MapperConfiguration(mc =>

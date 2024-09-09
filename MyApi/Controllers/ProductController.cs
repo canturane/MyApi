@@ -10,7 +10,7 @@ namespace MyApi.Controllers
     public class ProductController : ControllerBase
     {
         private readonly IProductService _productService;
-        private readonly IMapper _mapper;
+       
 
         public ProductController(IProductService productService)
         {
