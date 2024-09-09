@@ -13,8 +13,10 @@ namespace MyApi.Service.Mappers
             CreateMap<Dtos.PersonResponseDto, MyApi.Data.Entities.Person>().ReverseMap();
             CreateMap<Dtos.ProductResponseDto, MyApi.Data.Entities.Product>().ReverseMap();
             CreateMap<Dtos.ProductRequestDto, MyApi.Data.Entities.Product>().ReverseMap();
+            CreateMap<Dtos.BrandRequestDto, MyApi.Data.Entities.Brand>().ReverseMap();
+            CreateMap<Dtos.BrandResponseDto, MyApi.Data.Entities.Brand>().ReverseMap();
 
-  
+
 
             CreateMap<Product, ProductResponseDto>()
     .ForMember(dest => dest.Brand, opt => opt.MapFrom(src => new BrandDto
